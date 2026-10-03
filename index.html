@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fisioterapia esportiva em Canoas e São Leopoldo | Igor Bones</title>
+<meta name="description" content="Sentindo dor ao treinar ou jogar? Avaliação e atendimento individual com Igor Bones, especialista em fisioterapia esportiva. Canoas e São Leopoldo / RS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --court:#17446b; --court-deep:#0f2f4c; --ball:#e6f03c; --ball-ink:#14233a;
+  --bg:#f4f7f6; --card:#ffffff; --ink:#18232f; --muted:#52606d; --line:#d5dde2;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a26;--card:#14283a;--ink:#eaf0f4;--muted:#a9b8c4;--line:#27415a}}
+:root[data-theme="dark"]{--bg:#0d1a26;--card:#14283a;--ink:#eaf0f4;--muted:#a9b8c4;--line:#27415a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.15;margin:0 0 16px;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,5.2vw,3.3rem);font-weight:800}
+h2{font-size:clamp(1.55rem,3.4vw,2.2rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0 0 14px;max-width:62ch}
+.btn{display:inline-block;background:var(--ball);color:var(--ball-ink);font-weight:800;text-decoration:none;padding:16px 28px;border-radius:999px;border:2px solid var(--ball);font-size:1rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--ball);outline-offset:3px}
+.btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.dark{background:var(--court);color:#fff;border-color:var(--court)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+/* Hero */
+.hero{background:var(--court-deep);color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:18px;border:2px solid rgba(255,255,255,.16);border-radius:6px;pointer-events:none}
+.hero::after{content:"";position:absolute;top:18px;bottom:18px;left:62%;border-left:2px solid rgba(255,255,255,.16);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:36px;grid-template-columns:1.25fr 1fr;align-items:center}
+.hero p.sub{font-size:1.1rem;color:#d3e0ea}
+.brand{font-weight:700;font-size:.95rem;color:#b9cddc;margin-bottom:28px}
+.hero-card{background:#fff;color:#18232f;border-radius:14px;padding:26px}
+.hero-card h3{font-size:1.15rem}
+.hero-card ul{list-style:none;margin:0;padding:0}
+.hero-card li{padding:10px 0 10px 30px;border-top:1px solid #dfe6ea;position:relative;font-size:.97rem}
+.hero-card li:first-child{border-top:0}
+.hero-card li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border-radius:50%;background:var(--ball);border:2px solid var(--court)}
+.hero-card small{display:block;margin-top:12px;color:#52606d}
+
+/* Grids */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card p{color:var(--muted);margin:0;font-size:.98rem}
+.pains{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:500;font-size:.95rem}
+
+/* Passos */
+.steps{counter-reset:s;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 24px 24px 24px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--court);color:#fff;font-weight:800;margin-bottom:12px}
+.steps p{color:var(--muted);margin:0;font-size:.98rem}
+
+/* Autoridade */
+.auth{background:var(--court);color:#fff}
+.auth p{color:#d3e0ea}
+.auth-grid{display:grid;gap:36px;grid-template-columns:1.2fr 1fr;align-items:start}
+.creds{list-style:none;margin:0;padding:0}
+.creds li{padding:14px 0;border-top:1px solid rgba(255,255,255,.22);font-weight:500}
+.creds li:first-child{border-top:0}
+.creds b{display:block;font-weight:800}
+
+/* Cidades */
+.cities{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.city{background:var(--card);border:2px solid var(--court);border-radius:14px;padding:28px}
+.city h3{font-size:1.35rem}
+.city p{color:var(--muted);font-size:.97rem}
+
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--court)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:6px}
+
+.final{background:var(--court-deep);color:#fff;text-align:center}
+.final p{margin-left:auto;margin-right:auto;color:#d3e0ea}
+.final .btn-row{justify-content:center}
+footer{padding:28px 0 96px;font-size:.85rem;color:var(--muted);text-align:center}
+footer p{margin:0 auto 6px}
+
+/* CTA fixo no celular */
+.sticky{display:none}
+@media (max-width:760px){
+  section{padding:52px 0}
+  .hero .wrap,.auth-grid{grid-template-columns:1fr}
+  .hero::after{display:none}
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:rgba(15,47,76,.96)}
+  .sticky .btn{display:block;text-align:center;width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand">Fisioterapeuta Igor Bones · CREFITO 285.177-F<br>Especialista em Fisioterapia Esportiva · RQE 1070261127</div>
+      <h1>Sentindo dor ao treinar ou jogar? Descubra a causa e volte em segurança com um plano claro.</h1>
+      <p class="sub">Avaliação e atendimento fisioterapêutico individual, com um especialista em fisioterapia esportiva, experiência em tratamento de atletas profissionais, amadores ou apenas amantes da atividade física. Atendimentos em Canoas e São Leopoldo / RS.</p>
+      <div class="btn-row">
+        <a class="btn js-wa" href="#" data-city="">Agendar minha avaliação</a>
+        <a class="btn alt" href="#cidades">Ver consultórios</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="O que você recebe na avaliação">
+      <h3>Na sua primeira consulta</h3>
+      <ul>
+        <li>Avaliação do movimento do seu esporte, não só do local da dor</li>
+        <li>Explicação simples do que está acontecendo</li>
+        <li>Plano de tratamento e de retorno ao treino</li>
+        <li>Orientação do que pode e do que não pode fazer agora</li>
+      </ul>
+      <small>Atendimento com hora marcada.</small>
+    </aside>
+  </div>
+</header>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Para quem treina, joga e não quer parar</h2>
+    <p>Tenistas, corredores, praticantes de musculação e de outros esportes que sentem dor, tiveram uma lesão ou querem voltar a treinar com segurança.</p>
+    <ul class="pains">
+      <li>Dor no ombro ao sacar</li>
+      <li>Cotovelo de tenista</li>
+      <li>Dor no joelho ao correr ou agachar</li>
+      <li>Entorses de tornozelo</li>
+      <li>Dor lombar ao treinar</li>
+      <li>Tendinopatias</li>
+      <li>Retorno após cirurgias de LCA</li>
+      <li>Retorno após cirurgias de ombro</li>
+      <li>Reabilitação pós-cirúrgica traumato-ortopédica</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>O que muda com um tratamento feito para o esporte</h2>
+    <div class="grid">
+      <div class="card"><h3>Você entende o problema</h3><p>Explicação direta da origem da dor e do que está sobrecarregando seu corpo.</p></div>
+      <div class="card"><h3>Tratamento ligado ao seu gesto</h3><p>O plano considera sua modalidade, sua rotina de treino e sua fase de competição.</p></div>
+      <div class="card"><h3>Retorno com critério</h3><p>Você volta ao treino com etapas definidas, sem depender de achismo.</p></div>
+      <div class="card"><h3>Menos risco de recaída</h3><p>Fortalecimento e ajustes pensados para o problema não voltar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Como funciona o agendamento</h2>
+    <ol class="steps">
+      <li><h3>Chame no WhatsApp</h3><p>Escolha o consultório e conte rapidamente onde dói e o que você pratica.</p></li>
+      <li><h3>Escolha o horário</h3><p>Você recebe as opções de dia e hora disponíveis no consultório de Canoas ou de São Leopoldo.</p></li>
+      <li><h3>Faça sua avaliação</h3><p>Você sai da consulta sabendo a causa provável, o plano e os próximos passos.</p></li>
+    </ol>
+    <div class="btn-row"><a class="btn dark js-wa" href="#" data-city="">Quero agendar agora</a></div>
+  </div>
+</section>
+
+<section class="auth">
+  <div class="wrap auth-grid">
+    <div>
+      <h2>Quem vai cuidar de você</h2>
+      <p>Sou Igor dos Reis Bones, especialista em fisioterapia esportiva com mais de 7 anos de atuação e mais de 3.500 atendimentos. Acompanho atletas de tênis em torneios profissionais e amadores e atendo diariamente quem treina e convive com dor, com foco em reabilitação esportiva e traumato-ortopedia.</p>
+      <p>Também sou professor de ensino superior na área, o que me faz explicar cada decisão do seu tratamento com clareza.</p>
+    </div>
+    <ul class="creds">
+      <li><b>Mestre em Ciências do Movimento Humano</b>UFRGS</li>
+      <li><b>Professor universitário de fisioterapia</b>UniRitter</li>
+      <li><b>Atuação em torneios de tênis</b>ATP Challenger<br>Circuito World Tennis<br>ITF J300 - Brasil Juniors Cup<br>ITF M25 - Lajeado Open<br>ITF W75 - Vacaria Open</li>
+      <li><b>Áreas de atuação</b>Fisioterapia esportiva e traumato-ortopedia</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL: insira aqui depoimentos reais (texto, print ou vídeo) com autorização dos pacientes. -->
+
+<section id="cidades">
+  <div class="wrap">
+    <h2>Atendimento em Canoas e São Leopoldo</h2>
+    <p>Escolha o consultório mais perto de você. O botão já abre a conversa com a cidade preenchida.</p>
+    <div class="cities">
+      <div class="city">
+        <h3>Canoas</h3>
+        <p>Rua Dom Pedro II, 137<br>Bairro Nossa Senhora das Graças, Canoas<br><strong>Terças e quintas-feiras, das 09:00 às 20:00</strong></p>
+        <a class="btn dark js-wa" href="#" data-city="Canoas">Agendar em Canoas</a>
+      </div>
+      <div class="city">
+        <h3>São Leopoldo</h3>
+        <p>Impro São Leopoldo<br>Rua Andrade Neves, 200<br>Bairro São João Batista, São Leopoldo<br><strong>Segundas, quartas e sextas-feiras, das 09:00 às 20:00</strong></p>
+        <a class="btn dark js-wa" href="#" data-city="São Leopoldo">Agendar em São Leopoldo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Preciso praticar tênis para ser atendido?</summary><p>Não. Atendo quem pratica qualquer atividade física e sente dor ou quer voltar a treinar após uma lesão.</p></details>
+    <details><summary>Preciso de pedido médico?</summary><p>Para a avaliação fisioterapêutica não é necessário. Se você tiver exames ou laudos, leve na consulta.</p></details>
+    <details><summary>Quanto tempo dura a primeira consulta?</summary><p>[Informe a duração]. Você sai com a explicação do problema e com o plano de tratamento.</p></details>
+    <details><summary>Qual o valor e como pago?</summary><p>[Informe valor e formas de pagamento]. Os detalhes são confirmados no WhatsApp antes de marcar.</p></details>
+    <details><summary>Posso continuar treinando durante o tratamento?</summary><p>Na maioria dos casos você ajusta o treino em vez de parar. Isso é definido na avaliação, de acordo com a sua lesão.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Não espere a dor atrapalhar seu treino</h2>
+    <p>Marque sua avaliação em Canoas ou São Leopoldo e saia com um plano claro.</p>
+    <div class="btn-row">
+      <a class="btn js-wa" href="#" data-city="Canoas">Agendar em Canoas</a>
+      <a class="btn alt js-wa" href="#" data-city="São Leopoldo">Agendar em São Leopoldo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Igor dos Reis Bones · Fisioterapeuta · CREFITO 285.177-F · Especialista em Fisioterapia Esportiva RQE 1070261127</p>
+    <p>As informações desta página não substituem avaliação profissional.</p>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn js-wa" href="#" data-city="">Agendar avaliação no WhatsApp</a></div>
+
+<script>
+  // WhatsApp com DDI e DDD, só números.
+  var WA_NUMBER = "5551981575556";
+  document.querySelectorAll('.js-wa').forEach(function(a){
+    var city = a.getAttribute('data-city');
+    var msg = city
+      ? 'Olá, Igor! Quero agendar uma avaliação de fisioterapia esportiva em ' + city + '.'
+      : 'Olá, Igor! Quero agendar uma avaliação de fisioterapia esportiva. Pode me passar os horários?';
+    a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+</script>
+</body>
+</html>
